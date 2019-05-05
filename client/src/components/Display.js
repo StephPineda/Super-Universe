@@ -1,0 +1,11 @@
+import React from "react";
+import Carousel from './Carousel'
+
+const Display = () => {
+  return (
+    <div className="display">
+
+    </div>
+  )
+};
+export default Display;
