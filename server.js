@@ -13,11 +13,6 @@ app.get('/bio/search/:query', (request, response) => {
     .then(superResponse => response.json(superResponse.data.results || []))
 })
 
-// app.get("/api/demo", (request, response) => {
-//   axios.get(`https://superheroapi.com/api/1955038897933393/search/Superman`)
-//     .then(superResponse => response.json(superResponse.data || []) )
-// })
-
 if (process.env.NODE_ENV === "production") {
   // Serve any static files
   app.use(express.static(path.join(__dirname, "client/build")));
