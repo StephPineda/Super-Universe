@@ -10,7 +10,7 @@ const axios = require("axios")
 app.get('/bio/search/:query', (request, response) => {
   //axios.get(`https://superheroapi.com/${process.env.HERO_API_KEY}/search/${request.params.query}`)
   axios.get(`https://superheroapi.com/api/1955038897933393/search/${request.params.query}`)
-    .then(superResponse => response.json(superResponse.data || []))
+    .then(superResponse => response.json(superResponse.data.results || []))
 })
 
 // app.get("/api/demo", (request, response) => {
