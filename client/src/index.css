@@ -20,8 +20,9 @@ body{
   background-size: cover;
  
 }
+
 nav {
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -84,8 +85,10 @@ nav ul li a:hover:before {
 }
 
 Video {
-  width: 100vw;
-  height: 100vh;
+  margin-top: 70px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
 
 .text {
