@@ -1,18 +1,22 @@
-if (process.env.NODE_ENV !== "production") {
-  require("dotenv").config();
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
 }
 
-const express = require("express");
-const path = require("path");
-const app = express();
+const express = require("express")
+const path = require("path")
+const app = express()
+const axios = require("axios")
 
-// JUST FOR DEMO PURPOSES, PUT YOUR ACTUAL API CODE HERE
-app.get("/api/demo", (request, response) => {
-  response.json({
-    message: "Hello from server.js"
-  });
-});
-// END DEMO
+app.get('/bio/search/:query', (request, response) => {
+  //axios.get(`https://superheroapi.com/${process.env.HERO_API_KEY}/search/${request.params.query}`)
+  axios.get(`https://superheroapi.com/api/1955038897933393/search/${request.params.query}`)
+    .then(superResponse => response.json(superResponse.data || []))
+})
+
+// app.get("/api/demo", (request, response) => {
+//   axios.get(`https://superheroapi.com/api/1955038897933393/search/Superman`)
+//     .then(superResponse => response.json(superResponse.data || []) )
+// })
 
 if (process.env.NODE_ENV === "production") {
   // Serve any static files

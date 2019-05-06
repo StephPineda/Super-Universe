@@ -7,6 +7,7 @@ import Connect from "./components/Connect";
 import Display from "./components/Display";
 import Homepage from "./components/Homepage";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Video from "./components/Video";
 
 class App extends React.Component {
   state = { serverMessage: "" };
@@ -23,6 +24,7 @@ class App extends React.Component {
         <BrowserRouter>
           <>
             <NavBar />
+            <Video />
             <Switch>
               <Route path="/home" component={Homepage} />
               <Route path="/bio" component={Biography} />

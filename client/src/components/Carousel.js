@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import { image1, image2, image3 } from '../images';
+import { rain } from '../components';
 
 class Carousel extends Component {
-    state = { activeImage: 0, images: [image1, image2, image3] }
+    state = { activeVideo: 0, video: rain.mp4, }
     componentDidMount() {
         setInterval(() => this.startCarousel(), 3000)
     }
     startCarousel = () => {
-        const isLast = this.state.activeImage === this.state.images.length - 1
+        const isLast = this.state.activeVideo === this.state.video.length - 1
         const index = isLast ? 0 : this.state.activeImage + 1
         this.setState({ activeImage: index })
     }
@@ -15,11 +15,10 @@ class Carousel extends Component {
         const { images, activeImage } = this.state;
         return (
             <div className="slides_container">
-                <img src={images[activeImage]} alt="avenger stuff" />
+                <img className="images" src={images[activeImage]} alt="avenger stuff" />
             </div>
         )
     }
 }
-
 
 export default Carousel;
