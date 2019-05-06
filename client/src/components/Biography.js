@@ -10,9 +10,8 @@ class Biography extends Component {
     }
 
     render() {
-        console.log(this.state.bios)
         return (
-            <>
+            <div id="bio-content">
                 <input type="text" onChange={this.getbios} />
                 <div id="results">
                     {
@@ -26,7 +25,7 @@ class Biography extends Component {
                         })
                     }
                 </div>
-            </>
+            </div>
         )
     }
 }
