@@ -18,8 +18,10 @@ class Biography extends Component {
                         this.state.bios.map((bio, index) => {
                             return (
                                 <div key={index} className="bioObject">
-                                    <h3>{bio.name}</h3>
-                                    <img src={bio.image.url} alt="bio title" />
+                                    <h3 className='bio-name'>{bio.name}</h3>
+                                    <img className='bio-image' src={bio.image.url} alt="bio title" />
+                                    <p>{bio.biography['full-name']}</p>
+                                    <p>{bio.biography.aliases[0]}</p>
                                 </div>
                             )
                         })
