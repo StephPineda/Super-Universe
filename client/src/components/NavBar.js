@@ -16,7 +16,7 @@ const NavBar = () => (
         <Link to="/stats">POWER STATS</Link>
       </li>
       <li>
-        <Link to="/connect">CONNECTIONS</Link>
+        <Link to="/connect/search">CONNECTIONS</Link>
       </li>
     </ul>
   </nav>

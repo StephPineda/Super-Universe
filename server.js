@@ -8,10 +8,15 @@ const app = express()
 const axios = require("axios")
 
 app.get('/bio/search/:query', (request, response) => {
-  //axios.get(`https://superheroapi.com/${process.env.HERO_API_KEY}/search/${request.params.query}`)
   axios.get(`https://superheroapi.com/api/${process.env.API_KEY}/search/${request.params.query}`)
     .then(superResponse => response.json(superResponse.data.results || []))
 })
+
+app.get('/connect/search/:query', (request, response) => {
+  axios.get(`https://superheroapi.com/api/${process.env.API_KEY}/search/${request.params.query}`)
+    .then(superResponse => response.json(superResponse.data.results || []))
+})
+
 
 app.get('/api/bio/:id', (request, response) => {
   axios.get(`https://superheroapi.com/api/${process.env.API_KEY}/${request.params.id}/biography`)

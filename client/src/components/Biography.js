@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
 
-class SearchBar extends Component {
+class Biography extends Component {
     state = { bios: [] }
 
             getbios = event => {
@@ -41,4 +41,4 @@ class SearchBar extends Component {
     }
 }
 
-export default SearchBar
+export default Biography
