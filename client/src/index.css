@@ -1,11 +1,12 @@
 *{
   text-decoration: none;
   font-family: sans-serif;
+  color: white;
   box-sizing: border-box;
 }
 
 body{
-  background-image: linear-gradient(black, red, yellow);
+  background-image: linear-gradient(black, red, red, black);
   margin:0;
   padding:0;
 }
@@ -85,8 +86,9 @@ nav ul li a:hover:before {
 }
 
 video {
-  margin-top: 70px;
-  width: 100%;
+  margin-top: 220px;
+  padding-left: 150px;
+  width: 75%;
   height: 300px;
   object-fit: cover;
 }
