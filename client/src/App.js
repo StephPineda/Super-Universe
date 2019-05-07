@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
-import Biography from "./components/Biography";
+import SearchBar from "./components/SearchBar";
 import NavBar from "./components/NavBar";
 import Stats from "./components/Stats";
 import Connect from "./components/Connect";
 import Display from "./components/Display";
 import Homepage from "./components/Homepage";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Video from "./components/Video";
+// import Video from "./components/Video";
 
 class App extends React.Component {
   state = { serverMessage: "" };
@@ -23,11 +23,13 @@ class App extends React.Component {
       <>
         <BrowserRouter>
           <>
+            
             <NavBar />
-            <Video />
+            {/* <Video /> */}
+            <SearchBar />
             <Switch>
               <Route path="/home" component={Homepage} />
-              <Route path="/bio" component={Biography} />
+              <Route path="/bio/search" component={SearchBar} />
               <Route path="/stats" component={Stats} />
               <Route path="/connect" component={Connect} />
             </Switch>
