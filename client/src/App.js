@@ -17,6 +17,7 @@ class App extends React.Component {
       <>
         <BrowserRouter>
           <>
+            
             <NavBar />
             <Switch>
               <Route exact path="/home" component={Homepage} />
