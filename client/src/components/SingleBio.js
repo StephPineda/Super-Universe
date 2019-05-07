@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 class SingleBio extends Component {
-  state = { bio: {}, image: {} }
+  state = { bio:  {}, image: {} }
 
   componentDidMount(){
     const id = this.props.match.params.id

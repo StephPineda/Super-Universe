@@ -24,7 +24,7 @@ class App extends React.Component {
               <Route path="/bio/:id" component={SingleBio} />
               <Route exact path="/stats/search" component={Stats} />
               <Route exact path="/connect/search" component={Connect} />
-            </Switch>
+            </Switch >
           </>
         </BrowserRouter>
         <Display />
