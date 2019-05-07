@@ -10,7 +10,7 @@ const NavBar = () => (
     </div>
     <ul>
       <li>
-        <Link to="/bio">BIOGRAPHY</Link>
+        <Link to="/bio/search">BIOGRAPHY</Link>
       </li>
       <li>
         <Link to="/stats">POWER STATS</Link>

@@ -7,31 +7,24 @@ import Connect from "./components/Connect";
 import Display from "./components/Display";
 import Homepage from "./components/Homepage";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-// import Video from "./components/Video";
+import SingleBio from "./components/SingleBio";
 
 class App extends React.Component {
   state = { serverMessage: "" };
-
-  // componentDidMount() {
-  //   fetch("/api/demo")
-  //     .then(response => response.json())
-  //     .then(data => this.setState({ serverMessage: data.message }));
-  // }
 
   render() {
     return (
       <>
         <BrowserRouter>
           <>
-            
+
             <NavBar />
-            {/* <Video /> */}
-            <SearchBar />
             <Switch>
-              <Route path="/home" component={Homepage} />
-              <Route path="/bio/search" component={SearchBar} />
-              <Route path="/stats" component={Stats} />
-              <Route path="/connect" component={Connect} />
+              <Route exact path="/home" component={Homepage} />
+              <Route exact path="/bio/search" component={SearchBar} />
+              <Route path="/bio/:id" component={SingleBio} />
+              <Route exact path="/stats" component={Stats} />
+              <Route exact path="/connect" component={Connect} />
             </Switch>
           </>
         </BrowserRouter>

@@ -13,6 +13,16 @@ app.get('/bio/search/:query', (request, response) => {
     .then(superResponse => response.json(superResponse.data.results || []))
 })
 
+app.get('/api/bio/:id', (request, response) => {
+  axios.get(`https://superheroapi.com/api/1955038897933393/${request.params.id}/biography`)
+    .then(superResponse => response.json(superResponse.data))
+})
+
+app.get('/api/image/:id', (request, response) => {
+  axios.get(`https://superheroapi.com/api/1955038897933393/${request.params.id}/image`)
+    .then(superResponse => response.json(superResponse.data))
+})
+
 if (process.env.NODE_ENV === "production") {
   // Serve any static files
   app.use(express.static(path.join(__dirname, "client/build")));
