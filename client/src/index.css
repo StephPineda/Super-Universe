@@ -1,11 +1,19 @@
 *{
   text-decoration: none;
   font-family: sans-serif;
+<<<<<<< HEAD
+  color: white;
+=======
+>>>>>>> master
   box-sizing: border-box;
 }
 
 body{
+<<<<<<< HEAD
+  background-image: linear-gradient(black, red, red, black);
+=======
   background-image: linear-gradient(black, red, yellow);
+>>>>>>> master
   margin:0;
   padding:0;
 }
@@ -85,8 +93,14 @@ nav ul li a:hover:before {
 }
 
 video {
+<<<<<<< HEAD
+  margin-top: 220px;
+  padding-left: 150px;
+  width: 75%;
+=======
   margin-top: 70px;
   width: 100%;
+>>>>>>> master
   height: 300px;
   object-fit: cover;
 }
@@ -99,6 +113,7 @@ label {
 #bio-content{
   margin-top: 215px;
   padding: 2px 16px;
+<<<<<<< HEAD
 }
 
 .bioObject {
@@ -125,6 +140,34 @@ label {
   }
 }
 
+=======
+}
+
+.bioObject {
+  display: inline-block;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5%;
+  padding: 20px;
+  margin: 20px;
+  color: white;
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein{
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+>>>>>>> master
 .bioObject:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,5);
 }

@@ -1,22 +1,24 @@
 import React, { Component } from 'react'
 
 class SingleBio extends Component {
-  state = { bio: {} }
+  state = { bio:  {}, image: {} }
 
   componentDidMount(){
     const id = this.props.match.params.id
-    fetch(`/${id}`)
+    fetch(`/api/bio/${id}`)
       .then(response => response.json())
-      .then(singlebio => this.setState({ singlebio }))
+      .then(bio => this.setState({ bio }))
+    fetch(`/api/image/${id}`)
+      .then(response => response.json())
+      .then(image => this.setState({ image }))
   }
 
   render(){
-    // const { Title, Rated, Poster, Plot, imdbRating, Website } = this.state.bio
+    const { bio, image } = this.state
     return(
       <>
-       <h3 className='bio-name'>{bio.name}</h3>
-      <img className='bio-image' src={bio.image.url} alt="bio title" />
-      {/* <a href={Website} target="_blank">External Site</a> */}
+        <h3 className='bio-name'>{bio.name || 'Loading...'}</h3>
+        <img className='bio-image' src={image.url} alt="bio title" />
       </>
     )
   }
