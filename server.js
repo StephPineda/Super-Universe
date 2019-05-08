@@ -1,6 +1,6 @@
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config()
-} 
+}
 
 const express = require("express")
 const path = require("path")
@@ -16,6 +16,10 @@ app.get('/connect/search/:query', (request, response) => {
   axios.get(`https://superheroapi.com/api/${process.env.API_KEY}/search/${request.params.query}`)
     .then(superResponse => response.json(superResponse.data.results || []))
 })
+app.get('/stats/search/:query', (request, response) => {
+  axios.get(`https://superheroapi.com/api/${process.env.API_KEY}/search/${request.params.query}`)
+    .then(superResponse => response.json(superResponse.data.results || []))
+})
 
 
 app.get('/api/bio/:id', (request, response) => {
@@ -27,6 +31,11 @@ app.get('/api/image/:id', (request, response) => {
   axios.get(`https://superheroapi.com/api/${process.env.API_KEY}/${request.params.id}/image`)
     .then(superResponse => response.json(superResponse.data))
 })
+app.get('/api/stat/:id', (request, response) => {
+  axios.get(`https://superheroapi.com/api/${process.env.API_KEY}/${request.params.id}/powerstats`)
+    .then(superResponse => response.json(superResponse.data))
+})
+
 
 if (process.env.NODE_ENV === "production") {
   // Serve any static files
