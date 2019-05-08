@@ -1,24 +1,20 @@
 import React, { Component } from 'react';
+import ReactPlayer from 'react-player'
 
 class Video extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            videoURL: 'http://clips.vorwaerts-gmbh.de/VfE_html5.mp4'
+            videoURL: ''
         }
     }
 
     render() {
         return (
-            <div>
-                <h1>Explore the Universe</h1>
-            </div>,
-            <video id="background-video" loop autoPlay>
-                <source src={this.state.videoURL} type="video/mp4" />
-                <source src={this.state.videoURL} type="video/ogg" />
-                Your browser does not support the video tag.
-            </video>
+            <div className="video">
+                <ReactPlayer url='https://www.youtube.com/watch?v=X7SiuQxhAjg' playing="true" muted="true" controls="true" />
+            </div>
         )
     }
 }
