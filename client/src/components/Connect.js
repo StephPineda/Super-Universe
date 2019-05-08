@@ -14,8 +14,7 @@ class Connect extends Component {
     render() {
         return (
             <div id="bio-content">
-            <label>Search for your Hero!</label>
-                <input type="text" onChange={this.getbios} />
+                <input type="text" onChange={this.getbios} placeholder="Search the Universe for your hero..." />
                 <div id="results">
                     {
                         this.state.bios.map((bio, index) => {

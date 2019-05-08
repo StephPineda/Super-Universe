@@ -18,8 +18,7 @@ class Stats extends Component {
     render() {
         return (
             <div id="bio-content">
-                <label>Search for your Hero!</label>
-                <input type="text" onChange={this.getstat} />
+                <input type="text" onChange={this.getstat} placeholder="Search the Universe for your hero..." />
                 <div id="results">
                     {
                         this.state.stat.map((stat, index) => {
