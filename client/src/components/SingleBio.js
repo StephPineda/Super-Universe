@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
 class SingleBio extends Component {
-  state = { bio:  {}, image: {} }
+  state = { bio: {}, image: {} }
 
-  componentDidMount(){
+  componentDidMount() {
     const id = this.props.match.params.id
     fetch(`/api/bio/${id}`)
       .then(response => response.json())
@@ -13,9 +13,9 @@ class SingleBio extends Component {
       .then(image => this.setState({ image }))
   }
 
-  render(){
+  render() {
     const { bio, image } = this.state
-    return(
+    return (
       <>
         <h3 className='bio-name'>{bio.name || 'Loading...'}</h3>
         <img className='bio-image' src={image.url} alt="bio title" />

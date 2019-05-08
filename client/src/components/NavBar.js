@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
- 
+
 const NavBar = () => (
   <nav>
     <div className="brand">
@@ -13,7 +13,7 @@ const NavBar = () => (
         <Link to="/bio/search">BIOGRAPHY</Link>
       </li>
       <li>
-        <Link to="/stats">POWER STATS</Link>
+        <Link to="/stats/search">POWER STATS</Link>
       </li>
       <li>
         <Link to="/connect/search">CONNECTIONS</Link>

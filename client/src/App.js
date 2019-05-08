@@ -6,8 +6,9 @@ import Display from "./components/Display";
 import Homepage from "./components/Homepage";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import SingleBio from "./components/SingleBio";
-import Biography from './components/Biography';
-import Connect from './components/Connect';
+import Singlestats from "./components/Singlestats";
+import Biography from "./components/Biography";
+import Connect from "./components/Connect";
 
 class App extends React.Component {
   state = { serverMessage: "" };
@@ -22,12 +23,12 @@ class App extends React.Component {
               <Route exact path="/home" component={Homepage} />
               <Route exact path="/bio/search" component={Biography} />
               <Route path="/bio/:id" component={SingleBio} />
-              <Route exact path="/stats" component={Stats} />
-              <Route exact path="/connect" component={Connect} />
-            </Switch>
+              <Route exact path="/stats/search" component={Stats} />
+              <Route exact path="/connect/search" component={Connect} />
+              <Route path="/stats/:id" component={Singlestats} />
+            </Switch >
           </>
         </BrowserRouter>
-        <Display />
       </>
     );
   }

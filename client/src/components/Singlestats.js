@@ -1,22 +1,25 @@
 import React, { Component } from 'react'
 
 class Singlestats extends Component {
-    state = { stats: {} }
+    state = { stat: {}, image: {} }
 
     componentDidMount() {
         const id = this.props.match.params.id
-        fetch(`/${id}`)
+        fetch(`/api/stat/${id}`)
             .then(response => response.json())
-            .then(singlestats => this.setState({ singlestats }))
+            .then(stat => this.setState({ stat }))
+        fetch(`/api/image/${id}`)
+            .then(response => response.json())
+            .then(image => this.setState({ image }))
     }
 
     render() {
-        // const {  } = this.state.stats
+        const { stat, image } = this.state
+
         return (
             <>
-                <h3 className='stats-name'>{stats.name}</h3>
-                <img className='stats-image' src={stats.image.url} alt="stats title" />
-                {/* <a href={Website} target="_blank">External Site</a> */}
+                <h3 className='stat-name'>{stat.name}</h3>
+                <img className='stat-image' src={image.url} alt="stat title" />
             </>
         )
     }
