@@ -2,8 +2,6 @@ if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config()
 } 
 
-//process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
-
 const express = require("express")
 const path = require("path")
 const app = express()
