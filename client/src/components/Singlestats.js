@@ -20,8 +20,6 @@ class Singlestats extends Component {
             <>
                 <h3 className='stat-name'>{stat.name}</h3>
                 <img className='stat-image' src={image.url} alt="stat title" />
-                {/* <h3 {stat.powerstat}</h3> */}
-                {/* <a href={Website} target="_blank">External Site</a> */}
             </>
         )
     }
