@@ -30,7 +30,6 @@ class Biography extends Component {
                                         <img className='bio-image' src={bio.image.url} alt="bio title" />
                                         <p>{ 'Full name: ' }{bio.biography['full-name']}</p>
                                         <p>{ 'Alias: ' }{bio.biography.aliases[0]}</p>
-                                        <p>{ 'Alter Ego: ' }{bio.biography['alter-egos']}</p>
                                         <p>{ 'First Appearance: ' }{bio.biography['first-appearance']}</p>
                                         <p className='emoji-pic'>{ (bio.biography['alignment'] === 'good') ? 'GOOD' : 'BAD'}</p>
                                     </Link>

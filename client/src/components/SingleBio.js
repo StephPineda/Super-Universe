@@ -16,10 +16,18 @@ class SingleBio extends Component {
   render() {
     const { bio, image } = this.state
     return (
-      <>
-        <h3 className='bio-name'>{bio.name || 'Loading...'}</h3>
-        <img className='bio-image' src={image.url} alt="bio title" />
-      </>
+      <div id="results">
+        <div className="bioObject">
+            <h3 className='bio-name'>{bio.name} || Loading...</h3>
+            <img className='bio-image' src={image.url} alt="bio title" />
+            <p>{ 'Full name: ' }{bio['full-name']}</p>
+            <p>{ 'Alter Ego: ' }{bio['alter-egos']}</p>
+            <p>{ 'First Appearance: ' }{bio['first-appearance']}</p>
+            <p>{ 'Place of Birth: ' }{bio['place-of-birth']}</p>
+            <p>{ 'Publisher: ' }{bio['publisher']}</p>
+            <p className='emoji-pic'>{ (bio['alignment'] === 'good') ? 'GOOD' : 'BAD'}</p>
+        </div>
+      </div>
     )
   }
 }
