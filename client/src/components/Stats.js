@@ -10,8 +10,8 @@ class Stats extends Component {
         if (event.target.value && event.target.value.trim() !== '') {
             fetch(`/stats/search/${event.target.value}`)
                 .then(response => response.json())
-                // .then(stat => this.setState({ stat }))
-                .then(stat => console.log(stat))
+                .then(stat => this.setState({ stat }))
+
         }
     }
 
@@ -29,15 +29,11 @@ class Stats extends Component {
                                         <h3 className='bio-name'>{stat.name}</h3>
                                         <img className='bio-image' src={stat.image.url} alt="stat title" />
                                         <p>{'Full name: '}{stat.biography['full-name']}</p>
-                                        <p>{'intelligence: '}{stat.powerstat['intelligence']}</p>
-                                        <p>{'strength: '}{stat.powerstat['strength']}</p>
-                                        <p>{'durability: '}{stat.powerstat['durability']}</p>
-                                        <p>{'power: '}{stat.powerstat['power']}</p>
-                                        <p>{'combat: '}{stat.powerstat['combat']}</p>
-
-
-
-
+                                        <p>{'intelligence: '}{stat.powerstats['intelligence']}</p>
+                                        <p>{'strength: '}{stat.powerstats['strength']}</p>
+                                        <p>{'durability: '}{stat.powerstats['durability']}</p>
+                                        <p>{'power: '}{stat.powerstats['power']}</p>
+                                        <p>{'combat: '}{stat.powerstats['combat']}</p>
                                         <p className='emoji-pic'>{(stat.biography['alignment'] === 'good') ? 'GOOD' : 'BAD'}</p>
                                     </Link>
                                 </div>
