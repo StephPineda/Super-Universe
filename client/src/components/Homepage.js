@@ -7,7 +7,7 @@ const Homepage = () => {
             <div className="knockout">
                 Explore the Universe
             </div>
-        <Video />
+            <Video />
         </div>
     )
 };

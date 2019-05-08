@@ -2,7 +2,6 @@ import React from "react";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import Stats from "./components/Stats";
-import Display from "./components/Display";
 import Homepage from "./components/Homepage";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import SingleBio from "./components/SingleBio";
