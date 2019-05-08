@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
 import { Link  } from "react-router-dom";
 
+
+let Img = require('react-image')
+
+const myComponent = () => <Img src="https://i.pinimg.com/originals/cf/aa/56/cfaa565cef8b44c349685a9abb6480c9.png" />
+
 class Biography extends Component {
     state = { bios: [] }
 
@@ -15,8 +20,10 @@ class Biography extends Component {
     render() {
         return (
             <div id="bio-content">
-            <label>Search for your Hero!</label>
-                <input type="text" onChange={this.getbios} />
+                <div>
+                    <img src="https://i.pinimg.com/originals/cf/aa/56/cfaa565cef8b44c349685a9abb6480c9.png" />
+                </div>
+                <input type="text" onChange={this.getbios} placeholder="Search the Universe for your hero..."/>
                 <div id="results">
                     {
                         this.state.bios.map((bio, index) => {
