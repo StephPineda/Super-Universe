@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => (
   <nav>
@@ -10,16 +10,16 @@ const NavBar = () => (
     </div>
     <ul>
       <li>
-        <Link to="/bio/search">BIOGRAPHY</Link>
+        <NavLink to="/bio/search" activeClassName='is-active'>BIOGRAPHY</NavLink>
       </li>
       <li>
-        <Link to="/stats/search">POWER STATS</Link>
+        <NavLink to="/stats/search" activeClassName='is-active'>POWER STATS</NavLink>
       </li>
       <li>
-        <Link to="/connect/search">CONNECTIONS</Link>
+        <NavLink to="/connect/search" activeClassName='is-active'>CONNECTIONS</NavLink>
       </li>
     </ul>
   </nav>
 );
-
+ 
 export default NavBar;

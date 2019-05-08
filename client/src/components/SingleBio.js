@@ -18,7 +18,7 @@ class SingleBio extends Component {
     return (
       <div id="results">
         <div className="bioObject">
-            <h3 className='bio-name'>{bio.name} || Loading...</h3>
+            <h3 className='bio-name'>{bio.name}</h3>
             <img className='bio-image' src={image.url} alt="bio title" />
             <p>{ 'Full name: ' }{bio['full-name']}</p>
             <p>{ 'Alter Ego: ' }{bio['alter-egos']}</p>
